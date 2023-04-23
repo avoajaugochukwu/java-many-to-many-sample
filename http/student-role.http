@@ -1,0 +1,59 @@
+### Create student
+POST http://localhost:8080/api/student
+Content-Type: application/json
+
+{
+  "name": "Ugochukwu Avoaja",
+  "studentId": 80175
+}
+
+### Create student
+POST http://localhost:8080/api/student
+Content-Type: application/json
+
+{
+  "name": "John Bosco",
+  "studentId": 90189
+}
+
+### Get students
+GET http://localhost:8080/api/student
+
+### Create Course
+POST http://localhost:8080/api/course
+Content-Type: application/json
+
+{
+  "name": "Java 101",
+  "professor": "Dr. John Bosco",
+  "description": "Java 101 course"
+}
+
+### Create Course
+POST http://localhost:8080/api/course
+Content-Type: application/json
+
+{
+  "name": "Philosophy 101",
+  "professor": "Dr. Ugochukwu Avoaja",
+  "description": "Philosophy 101 course"
+}
+
+### Add student to course
+POST http://localhost:8080/api/student/1/course/1
+
+### Create student and course at the same time
+POST http://localhost:8080/api/student
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "courses": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    }
+  ]
+}
